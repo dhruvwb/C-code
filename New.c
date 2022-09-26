@@ -1,52 +1,27 @@
-// #include <stdio.h>
-
-// int main()
-// {
-//     int a[5] = {5, 1, 15, 20, 25};
-//     int i, j, m;
-
-//     i = ++a[1];
-//     j = a[1]++;
-//     m = a[i++];
-
-//     printf("%d %d %d", i, j, m);
-//     return 0;
-// }
-
-
-#include<stdio.h>
+// Program for the transpose of the matrix
+#include <stdio.h>
 
 int main(){
-    int arr[3][3] = {
-        {1,2,3},
-        {3,4,5},
-        {4,5,6}
-    };
-    int i , j , k=0,sum[3][3];
+    int arr[2][2][2] , i , j , k ,arr2[2][2][2] ;
 
-    int arr2[3][3] = {
-        {1,5,3},
-        {1,2,5},
-        {2,2,6}
-    };
-            // while(k<3){
-
-    for(i=0;i<3;i++){
-        for(j=0;j<3;j++){
-            sum[i][j] =0;
-            for(k=0;k<3;k++){
-               sum[i][j] += arr[i][k] * arr2[k][j];  
-            //    k+1;
-            //    printf("THis");
-            }
-        }
-        
+    printf("Enter the elements of the Matrix \n");
+        for(i=0;i<2;i++){
+         for(j=0;j<2;j++){
+         for(k=0;k<2;k++){
+                printf("Arr[%d][%d][%d] = ",i,j,k);
+                scanf("%d",&arr[i][j][k]);
     }
-    printf("The Multiplication of the matrix is:\n");
-         for(i=0;i<3;i++){
-        for(j=0;j<3;j++){
-            printf("%d\t" , sum[i][j]);
-        }
-            printf("\n");
+    }
+    }
+        printf("Printing the 3-d matrix \n");
+     for(i=0;i<2;i++){
+         for(j=0;j<2;j++){
+         for(k=0;k<2;k++){
+            printf("%d\t",arr[i][j][k]);
          }
+         printf("\n");
+         }
+         printf("\n\n");
+     }
+    
 }
